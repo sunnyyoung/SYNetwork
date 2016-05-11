@@ -18,6 +18,10 @@
     return YES;
 }
 
+- (NSURLRequestCachePolicy)requestCachePolicy {
+    return NSURLRequestReloadIgnoringCacheData;
+}
+
 - (NSString *)requestPath {
     return @"/api/random/data/Android/20";
 }

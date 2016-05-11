@@ -24,12 +24,10 @@
 		7D4B82861CA3931A00ABBA2C /* SYNetworkUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4B82851CA3931A00ABBA2C /* SYNetworkUtil.m */; };
 		7DEA41E11CA28EC40080BC27 /* TestRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEA41E01CA28EC40080BC27 /* TestRequest.m */; };
 		7DEF7D381CA9099800909A40 /* SYBatchRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DEF7D371CA9099800909A40 /* SYBatchRequestManager.m */; };
-		E79EF67A84E336658BC46A3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 050246927E1408558C996100 /* libPods.a */; };
+		B2F886D417DAE55F255D3F59 /* libPods-SYNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A7A6705E4208ABD5599D55 /* libPods-SYNetwork.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		050246927E1408558C996100 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		11B13B59788FBE5E7425A58B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7D02EB0A1CA3F09000E0A29B /* SYBatchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBatchRequest.h; sourceTree = "<group>"; };
 		7D02EB0B1CA3F09000E0A29B /* SYBatchRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBatchRequest.m; sourceTree = "<group>"; };
 		7D3D62B41CAD0F2C00573CDD /* SYChainRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYChainRequestManager.h; sourceTree = "<group>"; };
@@ -63,7 +61,9 @@
 		7DEA41E01CA28EC40080BC27 /* TestRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRequest.m; sourceTree = "<group>"; };
 		7DEF7D361CA9099800909A40 /* SYBatchRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYBatchRequestManager.h; sourceTree = "<group>"; };
 		7DEF7D371CA9099800909A40 /* SYBatchRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYBatchRequestManager.m; sourceTree = "<group>"; };
-		B36B9E9234CCCF9787273C89 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		89F7E87C04A15873F891CACA /* Pods-SYNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYNetwork.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SYNetwork/Pods-SYNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		A4A7A6705E4208ABD5599D55 /* libPods-SYNetwork.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SYNetwork.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD840FBF66F3A4E64522DE8 /* Pods-SYNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SYNetwork.release.xcconfig"; path = "Pods/Target Support Files/Pods-SYNetwork/Pods-SYNetwork.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E79EF67A84E336658BC46A3B /* libPods.a in Frameworks */,
+				B2F886D417DAE55F255D3F59 /* libPods-SYNetwork.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +83,8 @@
 			children = (
 				7D409ECA1C9FFC120006F840 /* SYNetwork */,
 				7D409EC91C9FFC120006F840 /* Products */,
-				B358119BBE012C23B7E80C5C /* Pods */,
-				C148557ACEDCFF3F71898145 /* Frameworks */,
+				AD8AB1C46F14E6DC3CE1134A /* Pods */,
+				94F5AA98AEC5DD5C44EC6F4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,21 +151,21 @@
 			path = SYNetwork;
 			sourceTree = "<group>";
 		};
-		B358119BBE012C23B7E80C5C /* Pods */ = {
+		94F5AA98AEC5DD5C44EC6F4F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B36B9E9234CCCF9787273C89 /* Pods.debug.xcconfig */,
-				11B13B59788FBE5E7425A58B /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C148557ACEDCFF3F71898145 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				050246927E1408558C996100 /* libPods.a */,
+				A4A7A6705E4208ABD5599D55 /* libPods-SYNetwork.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD8AB1C46F14E6DC3CE1134A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				89F7E87C04A15873F891CACA /* Pods-SYNetwork.debug.xcconfig */,
+				BFD840FBF66F3A4E64522DE8 /* Pods-SYNetwork.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,12 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7D409EDF1C9FFC120006F840 /* Build configuration list for PBXNativeTarget "SYNetwork" */;
 			buildPhases = (
-				8890228D76E8ACF55E7B1FAF /* Check Pods Manifest.lock */,
+				EF1357772DED575C387A0D45 /* 📦 Check Pods Manifest.lock */,
 				7D409EC41C9FFC120006F840 /* Sources */,
 				7D409EC51C9FFC120006F840 /* Frameworks */,
 				7D409EC61C9FFC120006F840 /* Resources */,
-				20C53C00F28BDD3016A4D8DC /* Embed Pods Frameworks */,
-				F0A5FBD7D9322BE916FB61C6 /* Copy Pods Resources */,
+				3D47E3ADCDFC4A480B6304C1 /* 📦 Embed Pods Frameworks */,
+				608AACB2BCB33181DECBDED9 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,49 +237,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20C53C00F28BDD3016A4D8DC /* Embed Pods Frameworks */ = {
+		3D47E3ADCDFC4A480B6304C1 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYNetwork/Pods-SYNetwork-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8890228D76E8ACF55E7B1FAF /* Check Pods Manifest.lock */ = {
+		608AACB2BCB33181DECBDED9 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SYNetwork/Pods-SYNetwork-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF1357772DED575C387A0D45 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F0A5FBD7D9322BE916FB61C6 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -412,7 +412,7 @@
 		};
 		7D409EE01C9FFC120006F840 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B36B9E9234CCCF9787273C89 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 89F7E87C04A15873F891CACA /* Pods-SYNetwork.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SYNetwork/Info.plist;
@@ -425,7 +425,7 @@
 		};
 		7D409EE11C9FFC120006F840 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11B13B59788FBE5E7425A58B /* Pods.release.xcconfig */;
+			baseConfigurationReference = BFD840FBF66F3A4E64522DE8 /* Pods-SYNetwork.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SYNetwork/Info.plist;

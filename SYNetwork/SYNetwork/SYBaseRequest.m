@@ -32,6 +32,10 @@
     return SYRequestSerializerTypeHTTP;
 }
 
+- (NSURLRequestCachePolicy)requestCachePolicy {
+    return NSURLRequestUseProtocolCachePolicy;
+}
+
 - (NSString *)baseURL {
     return @"";
 }

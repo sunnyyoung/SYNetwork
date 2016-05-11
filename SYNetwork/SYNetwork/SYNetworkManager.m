@@ -62,6 +62,7 @@
             break;
         }
     }
+    self.manager.requestSerializer.cachePolicy = request.requestCachePolicy;
     self.manager.requestSerializer.timeoutInterval = request.requestTimeoutInterval;
     //HTTPHeaderFields
     NSDictionary *requestHeaderFieldDictionary = request.requestHeader;
@@ -159,14 +160,18 @@
 
 - (void)removeRequest:(SYBaseRequest *)request {
     [request.sessionDataTask cancel];
+    [request toggleAccessoriesStopCallBack];
+    [request clearCompletionBlock];
     [self removeRequestIdentifierWithRequest:request];
 }
 
 - (void)removeAllRequest {
-    NSDictionary *requestIdentifierDictionary = self.requestIdentifierDictionary.copy;
-    for (NSString *key in requestIdentifierDictionary.allValues) {
+    NSDictionary *requestIdentifierDictionary = self.requestIdentifierDictionary;
+    for (NSString *key in requestIdentifierDictionary.allKeys) {
         SYBaseRequest *request = self.requestIdentifierDictionary[key];
         [request.sessionDataTask cancel];
+        [request toggleAccessoriesStopCallBack];
+        [request clearCompletionBlock];
         [self.requestIdentifierDictionary removeObjectForKey:key];
     }
 }
